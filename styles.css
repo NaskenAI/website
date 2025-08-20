@@ -1,0 +1,114 @@
+/* Nasken AI — Minimal modern design */
+:root{
+  --bg:#0b0b12;
+  --surface:#11111a;
+  --muted:#9aa3b2;
+  --text:#f5f7fb;
+  --accent:#6ee7ff;
+  --primary:#5b8cff;
+  --ring:rgba(107,140,255,0.35);
+  --card:#151523;
+  --border:#1e2030;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Inter, Arial, 'Apple Color Emoji','Segoe UI Emoji';
+  color:var(--text);
+  background:linear-gradient(180deg,#0a0a12 0%, #0b0b14 40%, #0f1020 100%);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+
+a{color:var(--text); text-decoration:none}
+a:hover{opacity:.9}
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px 20px; background:rgba(10,10,18,.7); backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.brand{display:flex; align-items:center; gap:.6rem; font-weight:700}
+.brand img{width:28px;height:28px}
+.nav{display:flex; gap:1rem; align-items:center}
+.nav a{color:#dbe2ff}
+.nav .btn.small{padding:.5rem .8rem; border:1px solid var(--border); border-radius:999px}
+.nav-toggle{display:none; background:none; border:none; cursor:pointer}
+.nav-toggle span{display:block;width:22px;height:2px;background:#dbe2ff;margin:4px 0}
+
+.hero{position:relative; padding:90px 20px 40px}
+.hero-inner{max-width:1050px;margin:0 auto; text-align:center}
+.hero h1{font-size:clamp(36px,5vw,56px); line-height:1.05; margin:.2em 0}
+.hero .accent{color:var(--accent)}
+.lead{color:#c6ccdb; font-size:1.15rem}
+.cta{margin:1.4rem 0; display:flex; justify-content:center; gap:12px; flex-wrap:wrap}
+.hero-badges{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:1rem}
+.hero-badges span{background:#0f1224; border:1px solid var(--border); padding:.45rem .7rem; border-radius:999px; color:#c6ccdb; font-size:.95rem}
+
+.hero-art .grid{position:absolute; inset:0; background-image:linear-gradient(transparent 95%, rgba(255,255,255,.06) 95%),
+linear-gradient(90deg, transparent 95%, rgba(255,255,255,.06) 95%); background-size:40px 40px; mask-image: radial-gradient(ellipse at 50% 0%, black 40%, transparent 75%)}
+.orb{position:absolute; filter:blur(30px); border-radius:50%}
+.orb-a{width:200px;height:200px; background:#3bf; top:10%; left:8%; opacity:.35}
+.orb-b{width:260px;height:260px; background:#9f7fff; top:18%; right:12%; opacity:.25}
+
+.section{padding:60px 20px}
+.section.alt{background:rgba(255,255,255,0.02); border-top:1px solid var(--border); border-bottom:1px solid var(--border)}
+.section-head{max-width:900px; margin:0 auto 24px; text-align:center}
+.section-head h2{font-size:clamp(28px,3.5vw,40px); margin:.1em 0}
+.section-head p{color:#c7cce0}
+
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:1100px; margin:0 auto}
+.grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:12px}
+.card{background:var(--card); border:1px solid var(--border); padding:18px; border-radius:16px}
+.card h3{margin-top:0}
+.price{display:flex; flex-direction:column; align-items:flex-start; gap:12px}
+.price .cost{font-size:2rem; font-weight:800}
+.price.emphasized{outline:2px solid var(--ring); background:linear-gradient(180deg,#151523 0%, #181833 100%)}
+
+.steps{max-width:900px;margin:0 auto; list-style:none; padding:0; display:grid; gap:14px}
+.step-badge{display:inline-grid; place-items:center; width:28px;height:28px; background:var(--primary); color:white; border-radius:50%; font-weight:700; margin-right:12px}
+
+.price-toggle{display:flex; justify-content:center; gap:8px; margin:8px 0 22px}
+.toggle{background:#0f1224; border:1px solid var(--border); color:#dbe2ff; padding:.5rem 1rem; border-radius:999px; cursor:pointer}
+.toggle.active{background:var(--primary); color:white}
+.toggle .save{background:rgba(0,0,0,.35); padding:.1rem .4rem; border-radius:8px; margin-left:6px}
+
+.faq{max-width:900px;margin:0 auto}
+.faq details{background:var(--card); border:1px solid var(--border); padding:14px 16px; border-radius:12px; margin:10px 0}
+.faq summary{cursor:pointer; font-weight:600}
+
+.contact .form{max-width:900px;margin:0 auto}
+.form label{display:flex; flex-direction:column; gap:6px; color:#d7ddf2}
+input,select,textarea{padding:.8rem .9rem; border-radius:10px; border:1px solid var(--border); background:#0f1224; color:var(--text); outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary); box-shadow:0 0 0 4px var(--ring)}
+.hidden{display:none}
+
+.btn{display:inline-block; padding:.8rem 1.1rem; border-radius:12px; background:#171a2f; border:1px solid var(--border)}
+.btn.small{padding:.55rem .9rem}
+.btn.primary{background:var(--primary); border-color:transparent; color:white}
+.btn.ghost{background:transparent; border-color:var(--border)}
+
+.site-footer{padding:28px 20px; border-top:1px solid var(--border); background:#0f1122}
+.footer-grid{max-width:1100px;margin:0 auto; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px}
+.footer-links{display:flex; gap:14px}
+.muted{color:var(--muted)}
+
+.logos{padding:20px; text-align:center}
+.logo-row{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+.logo-pill{border:1px solid var(--border); background:#0f1224; color:#cbd3ea; padding:.4rem .7rem; border-radius:999px}
+
+.prose{max-width:900px; margin:0 auto; color:#dbe2ff}
+.prose p{margin:1rem 0; color:#cbd3ea}
+
+@media (max-width: 900px){
+  .grid-3{grid-template-columns:1fr 1fr}
+}
+@media (max-width: 640px){
+  .grid-3, .grid-2{grid-template-columns:1fr}
+  .nav{display:none; position:absolute; top:60px; right:12px; background:#0f1224; border:1px solid var(--border); padding:12px; border-radius:12px; flex-direction:column; min-width:200px}
+  .nav.show{display:flex}
+  .nav-toggle{display:block}
+}

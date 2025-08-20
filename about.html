@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Nasken AI</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/"><img src="assets/logo.svg" alt="" /><span>Nasken AI</span></a>
+    <nav id="nav" class="nav">
+      <a href="/">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="#contact" onclick="window.location='/'">Contact</a>
+    </nav>
+    <button id="navToggle" class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="section">
+      <header class="section-head">
+        <h1>About Nasken AI</h1>
+        <p>We’re building hiring tools that respect both signal and humanity.</p>
+      </header>
+      <div class="prose">
+        <p>Nasken AI was founded to make interviews more predictive and more humane. 
+        Instead of banning AI, we embrace it—measuring how candidates use AI to solve problems, 
+        while giving interviewers structure and strong anti‑cheating signals.</p>
+
+        <p>Our approach draws on years of experience building mission‑critical infra, analytics, 
+        and safety systems. We believe transparency, auditability, and accessibility are necessary 
+        for modern hiring.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="/"><img src="assets/logo.svg" alt="" /><span>Nasken AI</span></a>
+        <p class="muted">© <span id="year"></span> Nasken Inc.</p>
+      </div>
+      <nav class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
